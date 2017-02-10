@@ -15,7 +15,7 @@
 <h3>Employee Login and Registration</h3>
 <button onclick="location.href='register.jsp'" type="button">
      Registration</button>
-     <button onclick="location.href='login.jsp'" type="button">
+     <button onclick="location.href='employeelogin.jsp'" type="button">
      Login</button>
 </body>
 </html>
