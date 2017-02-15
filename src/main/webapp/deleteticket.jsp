@@ -1,12 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" media="screen" href="//d85wutc1n854v.cloudfront.net/live/css/screen_preview_legacy.css">
+<title>Update Ticket</title>
 </head>
 <body>
-
+<form action="/tickets/delete_ticket" method="GET">
+	     <input type="hidden" name="EmailId" required  value="${LOGGED_IN_EMPLOYEE.emailId}"/>
+	 <input type="hidden" name="Password" required value="${LOGGED_IN_EMPLOYEE.password}"/>
+	    <h3>Ticket Id:</h3><input type="text" name="TicketId" required/>
+		<button type="submit"><h4>Delete Ticket</h4></button>
+	</form>
 </body>
 </html>
