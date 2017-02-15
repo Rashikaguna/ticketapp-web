@@ -9,11 +9,10 @@
 </head>
 <body>
 <form action="/tickets/update_close" method="GET">
-	  <h3>Email Id :</h3>   <input type="email" name="EmailId" required placeholder="yourmail@yourdomain.com" required autofocus/>
-	    <h3>Password :</h3> <input type="password" name="Password" required/>
-	    <h3>Issue Id:</h3><input type="text" name="IssueId" required/><br>
-		<button type="submit"><h4>Close My Ticket</h4></button>
+	    <input type="hidden" name="EmailId" required value="${LOGGED_IN_USER.emailId}" />
+	     <input type="hidden" name="Password" required  value="${LOGGED_IN_USER.password}"/>
+	    <h3>Ticket Id:</h3><input type="text" name="TicketId" required/><br>
+		<button type="submit"><h4>Close the Ticket</h4></button>
 	</form>
-	${ERROR}
 </body>
 </html>
