@@ -8,7 +8,7 @@
 <title>User | Login</title>
 </head>
 <body>
-<form action="/tickets/login" method="GET">
+<form action="/tickets/user_login" method="GET">
 	  <h3>Email Id :</h3>   <input type="text" name="EmailId" required autofocus/>
 	    <h3>Password :</h3> <input type="password" name="Password" required/><br>
 		<button type="submit"><h4>Login</h4></button>
