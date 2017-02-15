@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
  
 <!DOCTYPE html>
 <html>
@@ -10,10 +11,35 @@
 </head>
 <body>
 <form action="/tickets/view_user_tickets" method="GET">
-	  <h3>Email Id :</h3>   <input type="text" name="EmailId" required autofocus/>
-	    <h3>Password :</h3> <input type="password" name="Password" required/>
+	   <input type="hidden" name="EmailId" required value="${LOGGED_IN_USER.emailId}"/>
+	 <input type="hidden" name="Password" required value="${LOGGED_IN_USER.password}"/>
 	    <button type="submit"><h4>view</h4></button>
 	</form>
-${ERROR}
+
+<h3>User Details</h3>
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>User_id</th>
+				<th>Subject</th>
+				<th>Description</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="c" items="${list}" varStatus="i">
+				<tr>
+					<td>${c.id}</td>
+					<td>${c.userId.getId()}</td>
+					<td>${c.subject}</td>
+					<td>${c.description}</td>
+					<td>${c.status}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<br />
 </body>
 </html>
