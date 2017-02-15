@@ -18,8 +18,7 @@
      Update Ticket</button>
      <button onclick="location.href='closeTicket.jsp'" type="button">
      Close Ticket</button>
-     <button onclick="location.href='userviewTickets.jsp'" type="button">
+     <button onclick="location.href='viewusertickets.jsp'" type="button">
      View My Tickets</button>
-${ERROR}
 </body>
 </html>
